@@ -430,13 +430,3 @@ int main(void){
 	getNotified("/go/to/path1", "/go/to/path2");
 	return 0;
 }
-
-
-
-
-
-
-
-
-
-
