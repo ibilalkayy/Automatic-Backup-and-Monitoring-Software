@@ -11,15 +11,15 @@ I used one main function and that is getNotified(). All the other functions whet
 
 I will be starting from the above code. 
 
-1. transfer() that will copy all the data of one directory and transfer them into another directory. 
-2. removeFile() that will remove a particular file whose location is given.T
-3. closeInotify() that will close the inotify instance after monitoring the filesystem.
-4. listDir() that will give a list of all the directories so that we can easily count them and use them in getNotified() function.
-5. getNotified() that will monitor all the files using all the above functions. This function has mainly three parts. 
-   + Initializing the inotify instance using inotify_init()
-   + Adding all the paths and sub paths to watchlist inotify_add_watch
-   + Reading all the paths and then use IN_CREATE to monitor the creation of files, IN_MODIFY to monitor the modification of files, IN_DELETE to monitor the deletion of files, IN_MOVED_FROM to monitor the files moved from a path, and at the end IN_MOVED_TO to monitor the files moved to a path. 
-6. main() that will call the getNotified() function with an actual file path.
+1. **transfer()** that will copy all the data of one directory and transfer them into another directory. 
+2. **removeFile()** that will remove a particular file whose location is given.T
+3. **closeInotify()** that will close the inotify instance after monitoring the filesystem.
+4. **listDir()** that will give a list of all the directories so that we can easily count them and use them in getNotified() function.
+5. **getNotified()** that will monitor all the files using all the above functions. This function has mainly three parts. 
+   + Initializing the inotify instance using **inotify_init()**
+   + Adding all the paths and sub paths to watchlist **inotify_add_watch()**
+   + Reading all the paths and then use **IN_CREATE** to monitor the creation of files, **IN_MODIFY** to monitor the modification of files, **IN_DELETE** to monitor the deletion of files, **IN_MOVED_FROM** to monitor the files moved from a path, and at the end **IN_MOVED_TO** to monitor the files moved to a path. 
+6. **main()** that will call the **getNotified()** function with an actual file path.
 
 # Let's look at the second part
 The first part has been covered. Now come to the second part that is to monitor and take backup from computer system to Google Drive. Here I have used three python files. First one is Google.py, second is monitor.py, and third one is main.py.
