@@ -7,7 +7,7 @@ C code monitors and takes a backup of data from your computer system to External
 # Let's look at the first part
 The first part of this software is written in C language. Here I used inotify instance. It is a Linux Kernel subsystem which monitors changes to the filesystem and report those changes to applications.
 
-I used one main function and that is getNotified(). All the other functions whether these are **transfer()**, **removeFile()**, **closeInotify()**, **listDir()** are supporting the **getNotified()** function. So what these functions are doing?
+I used one main function and that is getNotified(). All the other functions whether these are ```transfer()```, ```removeFile()```, ```closeInotify()```, ```listDir()``` are supporting the ```getNotified()``` function. So what these functions are doing?
 
 I will be starting from the above code. 
 
@@ -29,14 +29,14 @@ I also used the PyQt5 for the purpose of making a user interface. PyQt5 has also
 So let's explain what these files are doing?
 
 ### 1. Google.py
-   - First of all I took the code from Google Drive for Developers documentation and then modified and used them in a class called MyDrive(). After that, I made some functions. 
+   - First of all I took the code from Google Drive for Developers documentation and then modified and used them in a class called ```MyDrive()```. After that, I made some functions. 
    - The first one is ```uploadFiles()``` that will upload all the present files from the computer system to Google Drive.
    - The second function is ```uploadFolders()``` that will upload all the folders from the computer system to Google Drive.
    - The third function is ```findId()``` that will find the id of a specific file.
    - The forth function is ```deleteFile()``` that will delete a file according to the given file Id.
    - The fifth function is ```listFolders()``` that will show all the folders present in a given path.
    - The sixth function is ```listFiles()``` that will show all the files present in a given path.
-   - The seventh function is ```main()``` that will call the **MyDrive()** class.
+   - The seventh function is ```main()``` that will call the ```MyDrive()``` class.
 
 ### 2. monitor.py
    - The ```monitor.py``` has one class ```MyHandler()``` that contains all the events and these events will give message when something is changed in a path.
