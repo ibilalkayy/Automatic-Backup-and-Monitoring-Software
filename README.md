@@ -35,6 +35,8 @@ I will be starting from the above code.
 
 [Back To The Top](#Automatic-Backup-and-Monitoring-Software)
 
+---
+
 # The second part
 The first part has been covered. Now come to the second part that is to monitor and take backup from computer system to Google Drive. Here I have used three python files. First one is *Google.py*, second is **monitor.py**, and third one is **main.py**.
 
@@ -81,6 +83,8 @@ So let's explain what these files are doing?
       - ```closeEvent()``` will enable the cancel button.
 
 [Back To The Top](#Automatic-Backup-and-Monitoring-Software)
+
+---
 
 ## Author Info
 
