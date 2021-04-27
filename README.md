@@ -4,7 +4,19 @@ This repository contains the code of a backup and monitoring software that will 
 This software is written in two Languages. The first one is C and another is Python. 
 C code monitors and takes a backup of data from your computer system to External Drive(if it is attached). Python language monitors and takes a backup of your data from your computer system to Google Drive.
 
-# Let's look at the first part
+---
+
+### Table of Contents
+The headers will be used to reference the location of destination.
+
+- [The First Part](#the-first-part)
+- [The Second Part](#the-second-part)
+- [Author Info](#author-info)
+
+---
+
+
+# The First Part
 The first part of this software is written in C language. Here I used inotify instance. It is a Linux Kernel subsystem which monitors changes to the filesystem and report those changes to applications.
 
 I used one main function and that is getNotified(). All the other functions whether these are ```transfer()```, ```removeFile()```, ```closeInotify()```, ```listDir()``` are supporting the ```getNotified()``` function. So what these functions are doing?
@@ -21,7 +33,9 @@ I will be starting from the above code.
    - Read all the paths and then use **IN_CREATE** to monitor the creation of files, **IN_MODIFY** to monitor the modification of files, **IN_DELETE** to monitor the deletion of files, **IN_MOVED_FROM** to monitor the files moved from a path, and at the end **IN_MOVED_TO** to monitor the files moved to a path. 
 6. **main()** will call the ```getNotified()``` function with an actual file path.
 
-# Let's look at the second part
+[Back To The Top](#Automatic-Backup-and-Monitoring-Software)
+
+# The second part
 The first part has been covered. Now come to the second part that is to monitor and take backup from computer system to Google Drive. Here I have used three python files. First one is *Google.py*, second is **monitor.py**, and third one is **main.py**.
 
 I also used the PyQt5 for the purpose of making a user interface. PyQt5 has also three files that are **selectDrive.ui**, **selectPath1.ui**, and **selectPath2.ui**. Further three JSON files are also created. 
@@ -66,7 +80,11 @@ So let's explain what these files are doing?
       - ```backWindow()``` will enable the back button.
       - ```closeEvent()``` will enable the cancel button.
 
+[Back To The Top](#Automatic-Backup-and-Monitoring-Software)
+
 ## Author Info
 
 - YouTube - [ibilalkayy](https://www.youtube.com/channel/UCBLTfRg0Rgm4FtXkvql7DRQ)
 - LinkedIn - [@ibilalkayy](https://www.linkedin.com/in/ibilalkayy/)
+
+[Back To The Top](#Automatic-Backup-and-Monitoring-Software)
