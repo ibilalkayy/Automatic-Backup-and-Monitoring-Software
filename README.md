@@ -31,7 +31,7 @@ I will be starting from the above code.
    - Initialize the inotify instance using ```inotify_init()```
    - Add all the paths and sub paths to watchlist ```inotify_add_watch()```
    - Read all the paths and then use **IN_CREATE** to monitor the creation of files, **IN_MODIFY** to monitor the modification of files, **IN_DELETE** to monitor the deletion of files, **IN_MOVED_FROM** to monitor the files moved from a path, and at the end **IN_MOVED_TO** to monitor the files moved to a path. 
-6. **main()** will call the ```getNotified()``` function with an actual file path.
+6. ```main()``` will call the ```getNotified()``` function with an actual file path.
 
 [Back To The Top](#Automatic-Backup-and-Monitoring-Software)
 
